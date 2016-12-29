@@ -1,0 +1,39 @@
+What does the scritp do
+=======================
+
+-   Backup DBs from production server
+-   Backup Target DBs on staging server
+-   Restore DBs to Staging server
+-   Cleanup after restore
+    -   Change SA
+    -   Enable Broker
+    -   Change connection string
+    -   Clean backup files
+
+How to use it
+=============
+
+Process
+-------
+
+-   Edit a txt file (RequestedDBFromProd )put in a list of DB's need to
+    be copied
+-   Run script with options
+
+UK staging
+----------
+
+-   Go to script path `D:\AutomationOPS\Prod2StagDBCopy>`
+-   Edit file `RequestedDBFromProd.txt`
+-   Run `D:\AutomationOPS\Prod2StagDBCopy> .\Prod2StagDBCopy.ps1`
+
+CA staging
+----------
+
+-   Go to script path `c:\AutomationOPS\Prod2StagDBCopy>`
+-   Edit file `RequestedDBFromProd.txt`
+-   Run
+    `C:\AutomationOPS\Prod2StagDBCopy> .\Prod2StagDBCopy.ps1 -fromApp2AppStaging`
+-   OR run
+    `C:\AutomationOPS\Prod2StagDBCopy> .\Prod2StagDBCopy.ps1 -fromGo2Staging`
+
